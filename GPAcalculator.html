@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GPA Calculator</title>
+
+<style>
+label {
+  display: inline-block;
+  width: 60px;
+}
+body {
+  text-align: center;
+  background-color: #996666;
+  color: white;
+}
+form {
+  background-color: #993399;
+  margin-left: 50px;
+  margin-right: 50px;
+} 
+  
+</style>
+
+<script>
+function CalculateGPA(class1, class2, class3, class4, class5, resultElementName) {
+   class1 = Number(class1);
+   class2 = Number(class2);
+   class3 = Number(class3);
+   class4 = Number(class4);
+   class5 = Number(class5);
+
+   var GPA = (class1 + class2 + class3 + class4 + class5)/5;
+   
+   var resultElement = document.getElementById(resultElementName)
+   resultElement.innerHTML = GPA;
+   
+}
+</script>
+
+</head>
+
+<body>
+
+  <h1>GPA Calculator</h1>
+  <form action="#" id="gpaCalculator">
+	<br>
+    <label>Class 1:</label> <input name="class1"> GPA</input>
+	<br>
+	<label>Class 2:</label> <input name="class2"> GPA</input>
+	<br>
+	<label>Class 3:</label> <input name="class3"> GPA</input>
+	<br>
+	<label>Class 4:</label> <input name="class4"> GPA</input>
+	<br>
+	<label>Class 5:</label> <input name="class5"> GPA</input>
+	<br>
+	<br>
+    <input type="button" name="calc" value="Calculate" onclick="CalculateGPA(this.form.class1.value, this.form.class2.value, this.form.class3.value, this.form.class4.value, this.form.class5.value, 'result')" /></p>
+	<br>
+  </form>
+  <p><h2>Your GPA: </h2><output id="result"></output></p>
+
+  <table cellpadding="5" cellspacing="0" border="1" align="center" background-color="yellow">
+     <tr>
+       <td><b>GPA</b></td>
+       <td><b>Letter Grade</b></td>
+	   <td><b>Percentage</b></td>
+     </tr>
+     <tr>
+       <td>4.0</td>
+       <td>A</td>
+	   <td>94 &#8211; 100%</td>
+     </tr>
+     <tr>
+       <td>3.7</td>
+       <td>A-</td>
+	   <td>90 &#8211; 93%</td>
+     </tr>
+     <tr>
+       <td>3.3</td>
+       <td>B+</td>
+	   <td>87 &#8211; 89%</td>
+     </tr>
+     <tr>
+       <td>3.0</td>
+       <td>B</td>
+	   <td>83 &#8211; 86%</td>
+     </tr>
+	 <tr>
+       <td>2.7</td>
+       <td>B-</td>
+	   <td>80 &#8211; 83%</td>
+     </tr>
+	 <tr>
+       <td>2.3</td>
+       <td>C+</td>
+	   <td>77 &#8211; 79%</td>
+     </tr>
+	 <tr>
+       <td>2.0</td>
+       <td>C</td>
+	   <td>73 &#8211; 76%</td>
+     </tr>
+	 <tr>
+       <td>1.7</td>
+       <td>C-</td>
+	   <td>70 &#8211; 72%</td>
+     </tr>
+	 <tr>
+       <td>1.3</td>
+       <td>D+</td>
+	   <td>67 &#8211; 69%</td>
+     </tr>
+	 <tr>
+       <td>1.0</td>
+       <td>D</td>
+	   <td>60 &#8211; 66%</td>
+     </tr>
+	 <tr>
+       <td>0.0</td>
+       <td>F</td>
+	   <td>0 &#8211; 59%</td>
+     </tr>
+  </table>          
+</body>
+</html>
